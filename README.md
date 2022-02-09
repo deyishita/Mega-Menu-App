@@ -1,5 +1,5 @@
 
-# App MEGA-MENU
+# APP MEGA-MENU
 
 <!-- DOCS-IGNORE:start -->
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
@@ -7,7 +7,7 @@
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 <!-- DOCS-IGNORE:end -->
 
-App Footer is useful while adding a footer to your store. User can customise the app as per their prefrence.
+App Mega-Menu is useful while building menu to your store. User can customise the app as per their prefrence.
 
 ![image](https://user-images.githubusercontent.com/93201110/153180447-6d301081-ff0a-4d4e-8b55-e53fe4c7ef69.png)
 
