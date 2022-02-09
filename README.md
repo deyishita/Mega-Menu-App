@@ -9,45 +9,54 @@
 
 App Footer is useful while adding a footer to your store. User can customise the app as per their prefrence.
 
-![image](https://user-images.githubusercontent.com/93201110/148345876-251616f1-7dc6-4a52-b04c-7a1500fb58f0.png)
-
+![image](https://user-images.githubusercontent.com/93201110/153180447-6d301081-ff0a-4d4e-8b55-e53fe4c7ef69.png)
 
 ## Configuration 
 
-1. Install the app "echidna.footer@0.0.1"
-2. Add the "echidna.footer@0.0.1" as a theme dependency in the `manifest.json` file
+1. Install the app "echidna.megamenuapp": "0.x"
+2. Add the "echidna.megamenuapp": "0.x" as a theme dependency in the `manifest.json` file
 
-![image](https://user-images.githubusercontent.com/93201110/148352444-abf074f9-ebdc-46e4-a4f2-4b1e179f029e.png)
-
-
-3. Now, you can use the main block exported by the footer app. Check out the list below:
+3. Now, you can use the main block exported by the mega-menu app. Check out the list below:
 
 | Blaock name    |           Description    |                                                                                                                             
 | ------------ |  --------------------------------------------------------------------------------------------------------------------------------------------- | 
-| app-footer      |   ![image](https://user-images.githubusercontent.com/93201110/148353803-f3e867d2-4fe0-4166-94be-c9aa271df4c4.png) Enables you to build the Footer.            |
+| "megamenu-app"     |   ![image](https://user-images.githubusercontent.com/93201110/148353803-f3e867d2-4fe0-4166-94be-c9aa271df4c4.png) Enables you to customize the menu.            |
 
-5. On the desire store page add the block to display the footer app. Take bellow example:
-
-![image](https://user-images.githubusercontent.com/93201110/148354627-feaa5e1d-0173-45a7-b899-0e21d5888c92.png)
+5. On the desire store page add the block to display the mega-menu app. 
 
 ## configuration
 
-Check all props to configure your footer in the table below:
+Check all props to configure your mega-menu in the table below:
 
 | Prop name    | Type            | Description    | Default value                                                                                                                               |
 | ------------ | --------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | 
-| title      | array       | List of titles(headers) for your contents (Example: 'Products', 'Buying' ect. from above reference image)      | undefined     |
-| column(n), url | array       | 1. column(n): List of contents to be displayed on your footer (Example: column1, column2.... ect can be used for number of columns required) 2. URL for each content in the list. For reference:  ![image](https://user-images.githubusercontent.com/93201110/148360912-85ed026e-d114-456b-b89f-5aee6760b8f4.png)  | undefined     |
-| imageURL      | array       | List of image URL's for displaying social icon images or any other images as per user prefrence       | undefined     |
-| socailLinks      | array       |  List of URL's to link your images(social icon)        | undefined     |
-| copyright      | string       |  Copyright string for your footer         | undefined     |
-| disclamer      | string       |  Defines the disclamer or any string content for your footer         | undefined     |
+| navItems      | array       | List of array of objects. Each object should contains {id:integer, title:string, path:url of the page}      | undefined     |
+
+further explained => id: should be the unique indentifier, title: title for nav-bar items, path: url of the page
 
 
-Prop types are: 
+Check all child blocks to configure your mega-menu in the table below:
 
-- `string` 
-- `array` 
+| Child block name    | Type            | Description    | Default value                                                                                                                               |
+| ------------ | --------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | 
+| DropdownItems      | array       | List of array of objects to display drop down items     | undefined     |
+
+Check out below the props to declare the child block:
+
+| Prop name      | Type            | Description    | Default value                                                                                                                               |
+| ------------ | --------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | 
+| items      | array       | List of array of objects to display drop down items. Each object contains as {title:string, path:url, content:[array of objects]    | undefined     |
+
+| Prop name    | Type            | Description    | Default value                                                                                                                               |
+| ------------ | --------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | 
+| title      | string       |  title of each seaction(column)   | undefined     |
+| path      | string       |  url for the items   | undefined     |
+| content      | array       |  List of array of objects. Each object contains as {name: list item name, path: url for the item} | undefined     |
+
+
+Below is the code snippet to display the block declaration:
+
+![image](https://user-images.githubusercontent.com/93201110/153182787-6d29753d-650b-478a-869b-f2bc787d6515.png)
 
 ## Customization
 
@@ -57,16 +66,13 @@ To apply CSS customization in this and other blocks, follow the instructions giv
 
 | CSS Handles |
 | ----------- | 
-| 'footerContainer'|
-| 'headerContainer'|
-| 'header'|
-|  'subheader'|
+| 'dropdownitems'|
+| 'dropdownList'|
+| 'dropdownContainer'|
 |  'links'|
-|  'icons'|
-|  'socialImage'|
-|  'disclamer'|
-|  'copyright'|
-| 'copyrightContainer' |
+|  'menuLinks'|
+|  'navbar'|
+|  'navItems'|
 
 
 ## Contributors ✨
