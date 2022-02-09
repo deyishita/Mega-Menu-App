@@ -1,0 +1,85 @@
+1. add dependecy "echidna.megamenuapp": "0.x" to your store menifest.json file
+
+2. add the main block to your store theme.(any block where you want to display)
+main block => megamenu-app
+
+3. declare the megamenu block with props as below:
+
+
+ "megamenu-app": {
+    "props":{
+
+      "navItems":[{
+        "id": 1,
+        "title":"Products",
+        "path": "/products"
+        
+      },
+        {
+          "id": 2,
+              "title": "Inspiração",
+              "path": "/inspiration"
+        },
+        {
+          "id": 3,
+              "title": "Supports",
+              "path": "/supports"
+        }, 
+        {
+          "id": 4,
+              "title": "Blog",
+              "path": "/blog"
+        }
+      ]    
+    },
+    "children":["DropdownItems"]
+  },
+
+  "DropdownItems":{
+    "props":{
+      "items": [
+        {
+          "title": "Running",
+          "path": "/running",
+          "content": [
+            { "name": "Polar Vantage V2", "link": "/running" },
+            { "name": "Polar Grit X Pro", "link": "/running" },
+            { "name": "Polar Grit X", "link": "/running" },
+            { "name": "Polar Vantage M2", "link": "/running" }
+          ]
+        },
+        {
+          "title": "Multisport & Triathlon",
+          "path": "/multisport-triathlon",
+          "content": [
+            { "name": "Polar Vantage V2", "link": "/multisport" },
+            { "name": "Polar Grit X Pro", "link": "/multisport" },
+            { "name": "Polar Grit X", "link": "/multisport" },
+            { "name": "Polar Vantage M2", "link": "/multisport" }
+          ]
+        },
+        {
+          "title": "Cycling",
+          "path": "/cycling",
+          "content": [
+            { "name": "Polar Vantage V2", "link": "/cycling" },
+            { "name": "Polar Grit X Pro", "link": "/cycling" },
+            { "name": "Polar Grit X", "link": "/cycling" },
+            { "name": "Polar Vantage M2", "link": "/cycling" }
+          ]
+        },
+        {
+          "title": "Yoga",
+          "path": "/yoga",
+          "content": [
+            { "name": "Polar Vantage V2", "link": "/yoga" },
+            { "name": "Polar Grit X Pro", "link": "/yoga" },
+            { "name": "Polar Grit X", "link": "/yoga" },
+            { "name": "Polar Vantage M2", "link": "/yoga" }
+          ]
+        }
+         ]
+    }
+  
+    
+  },
